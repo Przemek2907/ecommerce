@@ -1,0 +1,68 @@
+$inactive-tab-color: 'gray';
+$active-tab-color: 'red';
+
+.app-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: antiquewhite;
+  max-height: 65px;
+
+  ul > li {
+    list-style: none;
+  }
+
+  & a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.active-tab {
+  color: crimson;
+}
+
+.content-list {
+  width: 40%;
+  padding-top: 10px;
+  align-self: center;
+  min-width: 320px;
+  max-width: 587px;
+  margin: auto;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  max-height: 100%;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.user-area {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 15px;
+  align-items: center;
+  width: 180px;
+
+  & li {
+    height: 36px;
+    width: 36px;
+    border: 1px solid black;
+    border-radius: 50%;
+    line-height: 36px;
+    text-align: center;
+  }
+
+  & button {
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.item {
+  cursor: pointer;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}

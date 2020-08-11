@@ -1,0 +1,46 @@
+<nav class="app-navbar">
+  <div>
+    <a routerLink="/" class="navbar-brand">
+      Some logo
+    </a>
+  </div>
+  <ul class="content-list">
+    <li>
+      <a class="item" routerLink="/products">
+        <fa-icon [icon]="faShop" routerLinkActive="active-tab"></fa-icon>
+        <p routerLinkActive="active-tab">Products</p>
+      </a>
+    </li>
+    <li>
+      <a class="item" routerLink="/cart">
+        <fa-icon [icon]="faCart" routerLinkActive="active-tab"></fa-icon>
+        <p routerLinkActive="active-tab">Cart</p>
+      </a>
+    </li>
+    <li>
+      <a class="item" routerLink="/wishlist">
+        <fa-icon [icon]="faHeart" routerLinkActive="active-tab"></fa-icon>
+        <p routerLinkActive="active-tab">Wishlist</p>
+      </a>
+    </li>
+    <li>
+      <a class="item" routerLink="/contact">
+        <fa-icon [icon]="faMessage" routerLinkActive="active-tab"></fa-icon>
+        <p routerLinkActive="active-tab">Contact</p>
+      </a>
+    </li>
+  </ul>
+  <!--Main control panel with icon-->
+  <div>
+    <ul class="user-area">
+      <li>
+        <fa-icon [icon]="faUser"></fa-icon>
+      </li>
+      <li>
+        <button (click)="onLogin()">
+          <fa-icon [icon]="faAccount"></fa-icon>
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
