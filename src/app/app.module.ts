@@ -13,6 +13,7 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { ContactComponent } from './components/contact/contact.component';
 import {AuthGuard} from './services/security/AuthGuard';
 import {AuthService} from './services/security/AuthService';
+import {FormsModule} from '@angular/forms';
 
 const applicationRoutes: Routes = [
   {path: 'products', component: ProductListComponent},
@@ -30,7 +31,8 @@ const applicationRoutes: Routes = [
   imports: [
     FontAwesomeModule,
     BrowserModule,
-    RouterModule.forRoot(applicationRoutes)
+    RouterModule.forRoot(applicationRoutes),
+    FormsModule
   ],
   providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]

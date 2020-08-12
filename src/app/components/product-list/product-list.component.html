@@ -1,4 +1,6 @@
 <div class="container">
   <h6>Product List ready to be used</h6>
-  <app-product-component></app-product-component>
+  <div>
+  <app-product-component *ngFor="let singleProduct of products" [product] = "singleProduct"></app-product-component>
+  </div>
 </div>
