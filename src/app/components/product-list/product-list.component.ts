@@ -11,4 +11,8 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  addNewProduct () {
+    console.log("How to pass an event from parent to child");
+  }
 }
