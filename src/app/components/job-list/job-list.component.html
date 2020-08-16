@@ -1,0 +1,7 @@
+<div class="container">
+  <h6>JobAds List ready to be used</h6>
+  <button class="btn btn-outline-primary" (click)="addNewProduct()" >Add product</button>
+  <div class="product-list">
+    <app-product-component *ngFor="let singleProduct of products" [product] = "singleProduct"></app-product-component>
+  </div>
+</div>
