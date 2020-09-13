@@ -1,0 +1,29 @@
+<div class="login-page">
+  <div class="login-form">
+    <div *ngIf="isLoading" style="justify-self: center">
+      <app-loading-spinner>
+      </app-loading-spinner></div>
+    <form [formGroup]="loginForm" *ngIf="!isLoading" >
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input formControlName="email" class="form-control" id="email" type="text"/>
+        <span class="error-message" *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched">You have to enter a valid email address</span>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input formControlName="password" class="form-control" id="password" type="password"/>
+      </div>
+      <button type="button"
+              class="btn btn-outline-success"
+              (click)="onLoginSubmit()"
+              [disabled]="!loginForm.valid"> Login </button>
+      <div *ngIf="errorMessage" class="my-2">
+        <p class="alert alert-danger">{{errorMessage}}</p>
+      </div>
+    </form>
+  </div>
+  <div class="login-image">
+    <!--TODO resize the image and pick a proper one later on-->
+    <img src="https://picsum.photos/id/1/767/656">
+  </div>
+</div>

@@ -7,6 +7,7 @@ import {faEnvelopeOpenText} from '@fortawesome/free-solid-svg-icons/faEnvelopeOp
 import {faShoppingCart} from '@fortawesome/free-solid-svg-icons/faShoppingCart';
 import {faHeart} from '@fortawesome/free-solid-svg-icons/faHeart';
 import {AuthService} from '../../services/security/AuthService';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-navigation',
@@ -21,14 +22,13 @@ export class AppNavigationComponent implements OnInit {
   faUser = faUser;
   faAccount = faPowerOff;
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
   }
 
   onLogin() {
-    this.authService.login();
-    console.log('You are now logged in');
+    this.router.navigateByUrl('/login')
   }
 
   onLogout() {

@@ -1,0 +1,32 @@
+.login-page {
+  display: flex;
+  justify-content: space-between;
+  height: calc(100vh - 65px);
+}
+
+form {
+  width: 50%;
+}
+
+.login-image {
+  border: 1px solid #d7d731;
+  width: 50vw;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #d7d731;
+  width: 50vw;
+}
+
+.error-message {
+  color: #ea3d3d;
+  font-size: 12px;
+}
+
+input.ng-invalid.ng-touched {
+  border-color: #ea3d3d;
+}
