@@ -1,7 +1,12 @@
 .login-page {
   display: flex;
   justify-content: space-between;
-  height: calc(100vh - 65px);
+  height: 100vh;
+}
+
+.app-title {
+  text-transform: uppercase;
+
 }
 
 form {
@@ -9,7 +14,6 @@ form {
 }
 
 .login-image {
-  border: 1px solid #d7d731;
   width: 50vw;
 }
 
@@ -18,7 +22,7 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid #d7d731;
+  border-right: 1px solid #d7d731;
   width: 50vw;
 }
 

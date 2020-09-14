@@ -20,6 +20,7 @@ import {AuthInterceptorService} from "./services/security/AuthInterceptorService
 import {LoadingSpinner} from "./shared/loading-spinner/loading-spinner";
 
 const applicationRoutes: Routes = [
+  {path: '', component: LoginComponent},
   {path: 'products', component: JobListComponent},
   {path: 'products/:id', component: JobAdComponent},
   {path: 'wishlist', canActivate: [AuthGuard], component: WishlistComponent},
