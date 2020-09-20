@@ -33,29 +33,7 @@ $active-tab-color: 'red';
   align-content: center;
   justify-items: center;
   max-height: 100%;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.user-area {
-  display: flex;
-  justify-content: space-around;
-  padding-top: 15px;
-  align-items: center;
-  width: 180px;
-
-  & li {
-    height: 36px;
-    width: 36px;
-    border: 1px solid black;
-    border-radius: 50%;
-    line-height: 36px;
-    text-align: center;
-  }
-
-  & button {
-    background-color: transparent;
-    border: none;
-  }
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .item {
@@ -65,4 +43,42 @@ $active-tab-color: 'red';
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+
+.user-menu-list {
+  display: flex;
+  justify-content: space-around;
+
+  & span {
+    margin: auto 15px auto 10px;
+  }
+}
+
+.user-image {
+  width: 32px;
+  height: 32px;
+  border: 1px solid black;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 32px;
+}
+
+.hidden-menu {
+  display: none;
+}
+
+.dropdown-toggle {
+  background-color: transparent;
+  border: none;
+}
+
+.user-menu {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0.35rem;
+  padding-right: 0.35rem;
+
+  &:hover {
+   background-color: #a4dbf3;
+  }
 }

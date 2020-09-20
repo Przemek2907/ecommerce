@@ -7,7 +7,7 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
 import {AppComponent} from './app.component';
 import {RouterModule, Routes} from '@angular/router';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
-import { ContactComponent } from './components/contact/contact.component';
+import { AdminComponent } from './components/admin/admin.component';
 import {AuthGuard} from './services/security/AuthGuard';
 import {AuthService} from './services/security/AuthService';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -25,14 +25,14 @@ const applicationRoutes: Routes = [
   {path: 'products/:id', component: JobAdComponent},
   {path: 'wishlist', canActivate: [AuthGuard], component: WishlistComponent},
   {path: 'cart', component: ShoppingCartComponent},
-  {path: 'contact', component: ContactComponent},
+  {path: 'contact', component: AdminComponent},
   {path: 'login', component: LoginComponent}
 ];
 
 @NgModule({
   declarations: [
     AppNavigationComponent, JobListComponent, JobAdComponent, ShoppingCartComponent, JobAdDetailsComponent,
-    AppComponent, WishlistComponent, ContactComponent, LoginComponent, LoadingSpinner
+    AppComponent, WishlistComponent, AdminComponent, LoginComponent, LoadingSpinner
   ],
   imports: [
     FontAwesomeModule,

@@ -8,39 +8,51 @@
     <li>
       <a class="item" routerLink="/products">
         <fa-icon [icon]="faShop" routerLinkActive="active-tab"></fa-icon>
-        <p routerLinkActive="active-tab">Products</p>
+        <p routerLinkActive="active-tab">Open Positions</p>
       </a>
     </li>
     <li>
       <a class="item" routerLink="/cart">
-        <fa-icon [icon]="faCart" routerLinkActive="active-tab"></fa-icon>
-        <p routerLinkActive="active-tab">Cart</p>
+        <fa-icon [icon]="faUser" routerLinkActive="active-tab"></fa-icon>
+        <p routerLinkActive="active-tab">Candidates</p>
       </a>
     </li>
     <li>
       <a class="item" routerLink="/wishlist">
         <fa-icon [icon]="faHeart" routerLinkActive="active-tab"></fa-icon>
-        <p routerLinkActive="active-tab">Wishlist</p>
-      </a>
-    </li>
-    <li>
-      <a class="item" routerLink="/contact">
-        <fa-icon [icon]="faMessage" routerLinkActive="active-tab"></fa-icon>
-        <p routerLinkActive="active-tab">Contact</p>
+        <p routerLinkActive="active-tab">Reports</p>
       </a>
     </li>
   </ul>
   <!--Main control panel with icon-->
   <div>
-    <ul class="user-area">
-      <li>
-        <fa-icon [icon]="faUser"></fa-icon>
-      </li>
-      <li>
-        <button (click)="onLogin()">
-          <fa-icon [icon]="faAccount"></fa-icon>
-        </button>
-      </li>
-    </ul>
+    <div class="user-menu-list btn-group">
+      <fa-icon [icon]="faUser" class="user-image"></fa-icon>
+      <span>Current User</span>
+      <button type="button" class="dropdown-toggle" data-toggle="dropdown"></button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item user-menu" routerLink="/profile">
+              <fa-icon [icon]="faAccount"></fa-icon>
+              <span>My profile</span>
+            </a>
+            <a class="dropdown-item user-menu" routerLink="/settings">
+              <fa-icon [icon]="faAccount"></fa-icon>
+              <span>Settings</span>
+            </a>
+          <a class="dropdown-item user-menu" routerLink="/settings">
+            <fa-icon [icon]="faAccount"></fa-icon>
+            <span>Administration</span>
+          </a>
+            <a class="dropdown-item user-menu" routerLink="/login">
+              <fa-icon [icon]="faAccount"></fa-icon>
+              <span>Log out</span>
+            </a>
+        </div>
+    </div>
+    <!--      <li>-->
+    <!--        <button (click)="onLogin()">-->
+    <!--          <fa-icon [icon]="faAccount"></fa-icon>-->
+    <!--        </button>-->
+    <!--      </li>-->
   </div>
 </nav>

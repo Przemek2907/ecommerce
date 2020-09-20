@@ -1,0 +1,11 @@
+.admin_links_panel{
+  margin: 50px 30px auto 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  grid-gap: 30px;
+}
+
+.selected_card:hover {
+  background-color: #d7d731;
+  cursor: pointer;
+}

@@ -21,10 +21,12 @@ export class AppNavigationComponent implements OnInit {
   faMessage = faEnvelopeOpenText;
   faUser = faUser;
   faAccount = faPowerOff;
+  userMenuHidden: boolean
 
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
+    this.userMenuHidden = true;
   }
 
   onLogin() {
@@ -34,6 +36,11 @@ export class AppNavigationComponent implements OnInit {
   onLogout() {
     this.authService.logout();
     console.log('You are now logged out');
+  }
+
+  onUserMenuClick() {
+    console.log('User menu has been clicked');
+    this.userMenuHidden = !this.userMenuHidden;
   }
 
 }
