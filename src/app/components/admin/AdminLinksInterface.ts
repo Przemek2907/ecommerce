@@ -1,5 +1,6 @@
 export class AdminLinksInterface {
   appTitle: string;
   description: string;
-  link?: string
+  link: string;
+  linkName: string
 }

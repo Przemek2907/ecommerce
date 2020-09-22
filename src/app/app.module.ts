@@ -18,9 +18,12 @@ import { LoginComponent } from './components/login/login.component';
 import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule, HttpHandler} from "@angular/common/http";
 import {AuthInterceptorService} from "./services/security/AuthInterceptorService";
 import {LoadingSpinner} from "./shared/loading-spinner/loading-spinner";
+import { UserManagementComponent } from './components/admin/user-management/user-management.component';
 
 const applicationRoutes: Routes = [
   {path: '', component: LoginComponent},
+  {path: 'administration', component: AdminComponent},
+  {path: 'administration/users', component: UserManagementComponent},
   {path: 'products', component: JobListComponent},
   {path: 'products/:id', component: JobAdComponent},
   {path: 'wishlist', canActivate: [AuthGuard], component: WishlistComponent},
@@ -32,7 +35,7 @@ const applicationRoutes: Routes = [
 @NgModule({
   declarations: [
     AppNavigationComponent, JobListComponent, JobAdComponent, ShoppingCartComponent, JobAdDetailsComponent,
-    AppComponent, WishlistComponent, AdminComponent, LoginComponent, LoadingSpinner
+    AppComponent, WishlistComponent, AdminComponent, LoginComponent, LoadingSpinner, UserManagementComponent
   ],
   imports: [
     FontAwesomeModule,

@@ -4,7 +4,7 @@
     <div class="card-body selected_card">
       <h5 class="card-title">{{link.appTitle}}</h5>
       <p class="card-text">{{link.description}}</p>
-      <p class="card-text" *ngIf="link.link">{{link.link}}</p>
+      <a class="card-text" routerLink="{{link.link}}">{{link.linkName}}</a>
     </div>
   </div>
 </div>

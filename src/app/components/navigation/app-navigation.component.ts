@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {faStore} from '@fortawesome/free-solid-svg-icons/faStore';
-import {faUser} from '@fortawesome/free-solid-svg-icons';
+import {faUser, faUserCog, faWrench} from '@fortawesome/free-solid-svg-icons';
 import {faPowerOff} from '@fortawesome/free-solid-svg-icons/faPowerOff';
-import {faReceipt} from '@fortawesome/free-solid-svg-icons/faReceipt';
-import {faEnvelopeOpenText} from '@fortawesome/free-solid-svg-icons/faEnvelopeOpenText';
-import {faShoppingCart} from '@fortawesome/free-solid-svg-icons/faShoppingCart';
 import {faHeart} from '@fortawesome/free-solid-svg-icons/faHeart';
 import {AuthService} from '../../services/security/AuthService';
 import {Router} from "@angular/router";
@@ -16,11 +13,11 @@ import {Router} from "@angular/router";
 })
 export class AppNavigationComponent implements OnInit {
   faShop = faStore;
-  faCart = faShoppingCart;
   faHeart = faHeart;
-  faMessage = faEnvelopeOpenText;
   faUser = faUser;
   faAccount = faPowerOff;
+  faSettings = faWrench;
+  faAdmin = faUserCog;
   userMenuHidden: boolean
 
   constructor(private authService: AuthService, private router: Router) { }
